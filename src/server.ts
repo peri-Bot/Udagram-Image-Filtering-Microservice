@@ -22,7 +22,6 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
       '(\\?[;&a-z\\d%_.~+=-]*)?'+        // validate query string
       '(\\#[-a-z\\d_]*)?$','i'          // validate fragment locator
     ); 
-    console.log(url)
     return urlPattern.test(url);
   } 
   // @TODO1 IMPLEMENT A RESTFUL ENDPOINT
@@ -43,8 +42,6 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
   // @TODO1 IMPLEMENT A RESTFUL ENDPOINT
   app.get("/filteredimage",async(req,res)=>{
       let image_url:string = req.query.image_url;
-      console.log(image_url)
-
   
       // Validate the image_url query
       if(!isValidURL(image_url)){
@@ -52,8 +49,6 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
       }else{
         // Call filterImageFromURL(image_url) to filter the image
         const filteredImage:string = await filterImageFromURL(image_url);
-        console.log(image_url);
-
         // Send the resulting file in the response
         res.sendFile(filteredImage);
   
