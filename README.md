@@ -14,7 +14,7 @@ npm install
 
 ### Installing useful tools
 #### 1. [Postman](https://www.getpostman.com/downloads/)
-Postman is a useful tool to issue and save requests. Postman can create GET, PUT, POST, etc. requests complete with bodies. It can also be used to test endpoints automatically. We've included a collection (`./udacity-c2-restapi.postman_collection.json `) which contains example requsts.
+Postman is a useful tool to issue and save requests. Postman can create GET, PUT, POST, etc. requests complete with bodies. It can also be used to test endpoints automatically. We've included a collection (`./udagram-image-filtering.postman_collection.json `) which contains example requsts.
 
 ***
 
