@@ -1,4 +1,4 @@
-import express from 'express';
+import express, {Request,Response} from 'express';
 const bodyParser = require('body-parser');
 import {filterImageFromURL, deleteLocalFiles} from './util/util';
 
@@ -15,7 +15,7 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
 
   // Validate the url query
   function isValidURL(url:string):boolean{
-    var urlPattern = new RegExp('^(https?:\\/\\/)?'+ // validate protocol
+    let urlPattern:RegExp = new RegExp('^(https?:\\/\\/)?'+ // validate protocol
       '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|'+ // validate domain name
       '((\\d{1,3}\\.){3}\\d{1,3}))'+       // validate OR ip (v4) address
       '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*'+  // validate port and path
@@ -40,7 +40,7 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
 
   /**************************************************************************** */
   // @TODO1 IMPLEMENT A RESTFUL ENDPOINT
-  app.get("/filteredimage",async(req,res)=>{
+  app.get("/filteredimage",async(req:Request,res:Response)=>{
       let image_url:string = req.query.image_url;
   
       // Validate the image_url query
