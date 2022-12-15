@@ -1,5 +1,5 @@
 import express from 'express';
-import bodyParser from 'body-parser';
+const bodyParser = require('body-parser');
 import {filterImageFromURL, deleteLocalFiles} from './util/util';
 
 (async () => {
