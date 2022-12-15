@@ -26,3 +26,5 @@ npm run dev
 
 Developer mode runs off the TypeScript source. Any saves will reset the server and run the latest version of the codebase. 
 
+## Elastic Beanstalk 
+Endpoint URL: http://udagram-kidus-dev.us-east-1.elasticbeanstalk.com/ 
